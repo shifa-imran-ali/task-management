@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Task Tracker</h1>
+        <button id="logout-btn">Logout</button>
+    </header>
+    <div class="container">
+        <div class="column">
+            <h2>To Do</h2>
+        <div id="todo-container">
+            <div id="todo-tasks"></div>
+        </div>
+        <button id="create-task-btn">Create Task</button>
+        </div>
+
+        <div class="column">
+            <h2>In Progress</h2>
+            <div id="in-progress-container" >
+        </div>
+        </div>
+
+        <div  class="column">
+            <h2>Done</h2>
+            <div id="done-container"></div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Create Task</h2>
+            <input type="text" id="task-title" placeholder="Task Title" required />
+            <textarea id="task-description" placeholder="Task Description"></textarea>
+            <input type="text" id="assigned-to" placeholder="Assigned To" />
+            <button id="save-btn">Save Task</button>
+            <button id="close-modal-btn">Close</button>
+        </div>
+    </div>
+    <script src="./database.js" type="module" defer></script>
+    <script src="./auth.js" type="module" defer></script>
+
+</body>
+
+</html>

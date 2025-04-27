@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background: linear-gradient(to right, #d0bfdc, #7b5eb3);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Main Heading */
+header h1 {
+  color: #2c1452;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: glowAnimation 2s infinite alternate;
+}
+
+/* Glow Animation for Title */
+@keyframes glowAnimation {
+  0% {
+    text-shadow: 0 0 5px #ca4f8d, 0 0 6px #cb5c94, 0 0 7px #be618f;
+  }
+  50% {
+    text-shadow: 0 0 5px #FF80C0, 0 0 8px #FF80C0, 0 0 9px #FF40A1, 0 0 10px #FF40A1;
+  }
+  100% {
+    text-shadow: 0 0 5px #FF80C0, 0 0 10px #FF80C0, 0 0 15px #FF40A1;
+  }
+}
+
+/* Search Bar */
+.search-bar input {
+  padding: 12px 18px;
+  border: 2px solid #A7C7E7;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  width: 250px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #C1A6F4;
+  transform: scale(1.05);
+}
+
+/* Container for Columns */
+.container {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Columns */
+.column {
+  background: #fff;
+  border-radius: 25px;
+  padding: 25px;
+  flex: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: solid #47046b 5px;
+}
+
+.column:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #4B3F72;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Create Task Button */
+button {
+  margin-top: auto;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #4B3F72;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #A7C7E7;
+  transform: scale(1.05);
+}
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Modal Inputs and Textarea */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #A7C7E7;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #444;
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #4B3F72;
+  transform: scale(1.02);
+}
+
+/* Save and Close Buttons */
+button {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #4B3F72;
+  color: white;
+  margin: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #A7C7E7;
+  transform: scale(1.05);
+}
+
+/* Fade-in animation for modal */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
