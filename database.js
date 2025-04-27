@@ -47,7 +47,6 @@ saveBtn.addEventListener('click', async () => {
                 description,
                 assignedTo
             });
-            console.log("Task updated:", edit);
         } else {
             await addDoc(collection(db, "tasks"), {
                 title,
@@ -55,13 +54,12 @@ saveBtn.addEventListener('click', async () => {
                 assignedTo,
                 status: "To Do",
             });
-            console.log("Task created.");
         }
 
         modal.style.display = 'none';
         loadTasks();
     } catch (error) {
-        console.error("Error saving task: ", error);
+       alert("Error saving task: ", error);
     }
 });
 async function loadTasks() {
