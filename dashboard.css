@@ -52,21 +52,11 @@ header h1 {
   }
 }
 
-/* Search Bar */
-.search-bar input {
-  padding: 12px 18px;
-  border: 2px solid #A7C7E7;
-  border-radius: 25px;
-  font-size: 1.2rem;
-  width: 250px;
-  background-color: #fff;
-  transition: border-color 0.3s ease, transform 0.2s ease;
-}
-
-.search-bar input:focus {
-  outline: none;
-  border-color: #C1A6F4;
-  transform: scale(1.05);
+.task-card{
+  flex-wrap: wrap;
+  padding: 1vw;
+  background-color: #d0bfdc;
+  border-radius: 5px;
 }
 
 /* Container for Columns */
@@ -172,7 +162,6 @@ button:hover {
   transform: scale(1.02);
 }
 
-/* Save and Close Buttons */
 button {
   padding: 10px;
   font-size: 1rem;
@@ -190,14 +179,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Fade-in animation for modal */
 @keyframes fadeIn {
   from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
-}
-.task-card{
-    flex-wrap: wrap;
-    padding: 1vw;
-    background-color: #d0bfdc;
-    border-radius: 5px;
 }
